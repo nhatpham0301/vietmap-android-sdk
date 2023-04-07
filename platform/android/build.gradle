@@ -10,7 +10,6 @@ buildscript {
         classpath 'com.android.tools.build:gradle:7.4.0'
         classpath dependenciesList.licensesPlugin
         classpath dependenciesList.kotlinPlugin
-        // classpath dependenciesList.jacocoPlugin
         classpath dependenciesList.gradleNexus
     }
 }

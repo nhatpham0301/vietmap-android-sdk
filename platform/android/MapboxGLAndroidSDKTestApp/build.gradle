@@ -73,11 +73,7 @@ dependencies {
     implementation dependenciesList.supportConstraintLayout
 
     implementation dependenciesList.multidex
-
-//    implementation dependenciesList.timber
-
     implementation dependenciesList.okhttp3
-
     implementation dependenciesList.leakCanary
 
     androidTestImplementation dependenciesList.supportAnnotations
