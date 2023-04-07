@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply from: "../gradle/dependencies.gradle"
+
+android {
+    compileSdkVersion androidVersions.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion androidVersions.minSdkVersion
+        targetSdkVersion androidVersions.targetSdkVersion
+        versionCode 1
+        versionName VERSION_NAME
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation dependenciesList.supportCompat
+    implementation dependenciesList.annotations
+    testImplementation dependenciesList.kotlinLib
+    testImplementation dependenciesList.junit
+    testImplementation dependenciesList.mockito
+    testImplementation dependenciesList.robolectric
+    androidTestImplementation dependenciesList.mockitoAndroid
+    androidTestImplementation dependenciesList.testRunner
+    androidTestImplementation dependenciesList.testEspressoCore
+}
+
+apply from: "${rootDir}/gradle/gradle-bintray.gradle"
+apply from: "${rootDir}/gradle/javadoc.gradle"

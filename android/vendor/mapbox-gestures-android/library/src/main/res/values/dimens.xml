@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Default span change since start required to register scale gesture-->
+    <dimen name="mapbox_defaultScaleSpanSinceStartThreshold">7dp</dimen>
+
+    <!--Default Y change of pointers position required to register shove gesture-->
+    <dimen name="mapbox_defaultShovePixelThreshold">16dp</dimen>
+
+    <!--Default pointer's position change required to abort tap gesture-->
+    <dimen name="mapbox_defaultMultiTapMovementThreshold">5dp</dimen>
+
+    <!--Minimum span required to process gestures for API >= 24-->
+    <dimen name="mapbox_internalMinSpan24">6mm</dimen>
+
+    <!--Minimum span required to process gestures for API < 24-->
+    <dimen name="mapbox_internalMinSpan23">10mm</dimen>
+</resources>

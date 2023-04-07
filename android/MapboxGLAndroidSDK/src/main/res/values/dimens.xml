@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="maplibre_infowindow_tipview_width">8dp</dimen>
+    <dimen name="maplibre_infowindow_margin">8dp</dimen>
+    <dimen name="maplibre_four_dp">4dp</dimen>
+    <dimen name="maplibre_minimum_scale_speed">0.6dp</dimen>
+    <dimen name="maplibre_minimum_angled_scale_speed">0.9dp</dimen>
+    <dimen name="maplibre_eight_dp">8dp</dimen>
+    <dimen name="maplibre_ninety_two_dp">92dp</dimen>
+    <dimen name="maplibre_my_locationview_outer_circle">18dp</dimen>
+
+    <!--Minimum scale velocity required to start animation-->
+    <dimen name="maplibre_minimum_scale_velocity">225dp</dimen>
+
+    <!--Minimum scale span delta required to execute scale gesture when rotating-->
+    <dimen name="maplibre_minimum_scale_span_when_rotating">75dp</dimen>
+
+    <!--Minimum angular velocity required to start rotation animation-->
+    <dimen name="maplibre_minimum_angular_velocity">0.10dp</dimen>
+
+    <!--Angular velocity multiplier. Adapts the velocity for screen density-->
+    <dimen name="maplibre_angular_velocity_multiplier">1.3dp</dimen>
+
+    <!--Screen density constant to adjust gesture's velocityXY thresholds-->
+    <dimen name="maplibre_density_constant">0.29dp</dimen>
+
+    <dimen name="maplibre_locationComponentTrackingInitialMoveThreshold">25dp</dimen>
+    <dimen name="maplibre_locationComponentTrackingMultiFingerMoveThreshold">400dp</dimen>
+
+    <!-- mapbox-android-gesture -->
+    <!--Default span change since start required to register scale gesture-->
+    <dimen name="mapbox_defaultScaleSpanSinceStartThreshold" tools:ignore="ResourceName">7dp</dimen>
+
+    <!--Default Y change of pointers position required to register shove gesture-->
+    <dimen name="mapbox_defaultShovePixelThreshold" tools:ignore="ResourceName">16dp</dimen>
+
+    <!--Default pointer's position change required to abort tap gesture-->
+    <dimen name="mapbox_defaultMultiTapMovementThreshold" tools:ignore="ResourceName">5dp</dimen>
+
+    <!--Minimum span required to process gestures for API >= 24-->
+    <dimen name="mapbox_internalMinSpan24" tools:ignore="ResourceName">6mm</dimen>
+
+    <!--Minimum span required to process gestures for API < 24-->
+    <dimen name="mapbox_internalMinSpan23" tools:ignore="ResourceName">10mm</dimen>
+</resources>

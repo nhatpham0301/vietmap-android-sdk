@@ -1,0 +1,62 @@
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+apply from: file("${rootDir}/gradle/artifact-settings.gradle")
+apply from: file("${rootDir}/gradle/publish-root.gradle")
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId project.ext.mapLibreArtifactGroupId
+                artifactId project.ext.mapLibreArtifactId
+
+                from components.java
+
+                version project.ext.versionName
+
+                artifact sourcesJar {
+                    classifier "sources"
+                }
+
+                artifact javadocJar {
+                    classifier "javadoc"
+                }
+
+                 pom {
+                    name = project.ext.mapLibreArtifactTitle
+                    description = project.ext.mapLibreArtifactTitle
+                    url = project.ext.mapLibreArtifactUrl
+                    licenses {
+                        license {
+                            name = project.ext.mapLibreArtifactLicenseName
+                            url = project.ext.mapLibreArtifactLicenseUrl
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = project.ext.mapLibreDeveloperId
+                            name = project.ext.mapLibreDeveloperName
+                            email = 'maplibre@maplibre.org'
+                        }
+                    }
+                    scm {
+                        connection = project.ext.mapLibreArtifactScmUrl
+                        developerConnection = project.ext.mapLibreArtifactScmUrl
+                        url = project.ext.mapLibreArtifactUrl
+                    }
+                }
+            }
+        }
+    }
+}
+
+tasks.withType(Javadoc) {
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('docencoding', 'UTF-8')
+    options.addStringOption('charset', 'UTF-8')
+}
+
+signing {
+    sign publishing.publications
+}

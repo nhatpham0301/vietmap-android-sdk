@@ -1,0 +1,57 @@
+# Built application files
+android/android/*/build/
+
+# Crashlytics configuations
+android/com_crashlytics_export_strings.xml
+
+# Local configuration file (sdk path, etc)
+android/local.properties
+
+# Gradle generated files
+android/.gradle/
+
+# Signing files
+android/.signing/
+
+# User-specific configurations
+android/.idea/libraries/
+android/.idea/workspace.xml
+android/.idea/tasks.xml
+android/.idea/.name
+android/.idea/compiler.xml
+android/.idea/copyright/profiles_settings.xml
+android/.idea/encodings.xml
+android/.idea/misc.xml
+android/.idea/modules.xml
+android/.idea/scopes/scope_settings.xml
+android/.idea/vcs.xml
+android/*.iml
+
+# OS-specific files
+android/.DS_Store
+android/.DS_Store?
+android/._*
+android/.Spotlight-V100
+android/.Trashes
+android/ehthumbs.db
+android/Thumbs.db
+
+android/MapboxGLAndroidSDKTestApp/src/main/res/values/developer-config.xml
+android/local.properties
+android/gradle/configuration.gradle
+android/arm64-v8a
+android/armeabi-v7a
+android/MapboxGLAndroidSDK/.cxx
+android/MapboxGLAndroidSDK/build
+android/MapboxGLAndroidSDKTestApp/.cxx
+android/MapboxGLAndroidSDKTestApp/build
+android/.gradle
+android/x86
+android/x86_64
+android/build
+android/MapboxGLAndroidSDK/src/main/assets/sdk_versions/com.mapbox.mapboxsdk
+android/MapboxGLAndroidSDKTestApp/local.properties
+android/node_modules
+android/signing-key.text
+android/.java-version
+.DS_Store

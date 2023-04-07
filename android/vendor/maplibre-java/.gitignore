@@ -1,0 +1,26 @@
+BuildConfig.java
+
+# Gradle
+.gradle
+/local.properties
+
+# IntelliJ
+out/
+
+documentation
+
+/build
+build/
+/captures
+.externalNativeBuild
+
+# Idea
+.idea
+*.iml
+classes
+
+obj
+
+#MacOS
+.DS_Store
+/.java-version
