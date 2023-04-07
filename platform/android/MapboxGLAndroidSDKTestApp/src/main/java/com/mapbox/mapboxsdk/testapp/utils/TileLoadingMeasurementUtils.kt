@@ -91,9 +91,9 @@ class TileLoadingMeasurementUtils {
 
             private fun triggerPerformanceEvent(response: Response, elapsedMs: Long) {
                 val attributes: MutableList<Attribute<String>> = ArrayList()
-                val request = getUrl(response.request())
+                val request = getUrl(response.request)
                 attributes.add(Attribute("requestUrl", request))
-                attributes.add(Attribute("responseCode", response.code().toString()))
+                attributes.add(Attribute("responseCode", response.code.toString()))
                 attributes.add(
                     Attribute("connectionState", connectionState)
                 )
@@ -128,7 +128,7 @@ class TileLoadingMeasurementUtils {
                 private const val CONNECTION_CELLULAR = "cellular"
                 private const val CONNECTION_WIFI = "wifi"
                 private fun getUrl(request: Request): String {
-                    val url = request.url().toString()
+                    val url = request.url.toString()
                     return url.substring(0, url.indexOf('?'))
                 }
 

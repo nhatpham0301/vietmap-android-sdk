@@ -84,14 +84,14 @@ class PerformanceMeasurementActivity : AppCompatActivity() {
     private class EventListener : okhttp3.EventListener() {
         private val startTimes: MutableMap<String, Long> = HashMap()
         override fun callStart(call: Call) {
-            val url = call.request().url().toString()
+            val url = call.request().url.toString()
             startTimes[url] = System.nanoTime()
             super.callStart(call)
             Timber.e("callStart: %s", url)
         }
 
         override fun callEnd(call: Call) {
-            val url = call.request().url().toString()
+            val url = call.request().url.toString()
             Timber.e("callEnd: %s", url)
             val start = startTimes[url]
             if (start != null) {

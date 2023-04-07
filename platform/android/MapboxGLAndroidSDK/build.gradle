@@ -9,20 +9,16 @@ apply plugin: 'kotlin-android'
 apply from: "${rootDir}/gradle/native-build.gradle"
 
 dependencies {
-//    implementation 'androidx.annotation:annotation-jvm:1.6.0'
     implementation 'org.conscrypt:conscrypt-openjdk-uber:2.1.0'
     implementation 'org.codehaus.mojo:animal-sniffer:1.23'
     implementation 'junit:junit:4.12'
     implementation 'com.google.code.findbugs:jsr305:2.0.1'
     lintChecks project(":MapboxGLAndroidSDKLint")
-//    api dependenciesList.mapboxJavaGeoJSON
-//    api dependenciesList.mapboxAndroidGestures
 
     implementation dependenciesList.mapboxJavaTurf
     implementation dependenciesList.supportAnnotations
     implementation dependenciesList.supportFragmentV4
     implementation dependenciesList.okhttp3
-//    implementation dependenciesList.timber
 
     implementation dependenciesList.interpolator
 
