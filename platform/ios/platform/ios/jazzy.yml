@@ -1,0 +1,140 @@
+module: MapLibre
+author: MapLibre Contributors
+author_url: https://maplibre.org/
+github_url: https://github.com/maplibre/maplibre-gl-native
+copyright: '[License](https://github.com/maplibre/maplibre-gl-native/blob/main/platform/ios/LICENSE.md)'
+
+head: |
+  <link rel='shortcut icon' href='https://maplibre.org/favicon.ico' type='image/x-icon' />
+
+objc: Yes
+skip_undocumented: Yes
+hide_documentation_coverage: Yes
+umbrella_header: src/Mapbox.h
+framework_root: ../darwin/src
+
+custom_categories:
+  - name: Appendices
+    children:
+      - Working with GeoJSON Data
+      - Predicates and Expressions
+      - Migrating to Expressions
+      - For Style Authors
+      - Tile URL Templates
+      - Customizing Fonts
+      - Info.plist Keys
+      - Gesture Recognizers
+  - name: Maps
+    children:
+      - MGLSettings
+      - MGLMapCamera
+      - MGLMapView
+      - MGLMapViewDelegate
+      - MGLMapSnapshot
+      - MGLMapSnapshotOptions
+      - MGLMapSnapshotter
+      - MGLUserTrackingMode
+  - name: Primitive Shapes
+    children:
+      - MGLAnnotation
+      - MGLOverlay
+      - MGLShape
+      - MGLMultiPoint
+      - MGLPointAnnotation
+      - MGLPointCollection
+      - MGLPolygon
+      - MGLPolyline
+      - MGLMultiPolygon
+      - MGLMultiPolyline
+      - MGLShapeCollection
+  - name: Annotations
+    children:
+      - MGLAnnotationImage
+      - MGLAnnotationView
+      - MGLUserLocation
+      - MGLUserLocationAnnotationView
+  - name: User Interaction
+    children:
+      - MGLCalloutView
+      - MGLCalloutViewDelegate
+      - MGLCompassButton
+  - name: Location Updates
+    children:
+      - MGLLocationManager
+      - MGLLocationManagerDelegate
+  - name: Styling the Map
+    children:
+      - MGLStyle
+      - MGLLight
+  - name: Style Primitives
+    children:
+      - MGLFeature
+      - MGLPointFeature
+      - MGLPointFeatureCluster
+      - MGLPolygonFeature
+      - MGLPolylineFeature
+      - MGLMultiPolygonFeature
+      - MGLMultiPolylineFeature
+      - MGLPointCollectionFeature
+      - MGLShapeCollectionFeature
+      - MGLEmptyFeature
+  - name: Style Content
+    children:
+      - MGLSource
+      - MGLShapeSource
+      - MGLComputedShapeSource
+      - MGLTileSource
+      - MGLRasterTileSource
+      - MGLRasterDEMSource
+      - MGLVectorTileSource
+      - MGLImageSource
+  - name: Style Layers
+    children:
+      - MGLStyleLayer
+      - MGLForegroundStyleLayer
+      - MGLBackgroundStyleLayer
+      - MGLRasterStyleLayer
+      - MGLVectorStyleLayer
+      - MGLCircleStyleLayer
+      - MGLFillStyleLayer
+      - MGLFillExtrusionStyleLayer
+      - MGLHeatmapStyleLayer
+      - MGLHillshadeStyleLayer
+      - MGLLineStyleLayer
+      - MGLSymbolStyleLayer
+  - name: Offline Maps
+    children:
+      - MGLOfflineRegion
+      - MGLOfflineStorage
+      - MGLOfflinePack
+      - MGLOfflinePackProgress
+      - MGLOfflinePackState
+      - MGLTilePyramidOfflineRegion
+      - MGLShapeOfflineRegion
+  - name: Geometry
+    children:
+      - MGLCoordinateBounds
+      - MGLCoordinateBoundsEqualToCoordinateBounds
+      - MGLCoordinateBoundsGetCoordinateSpan
+      - MGLCoordinateBoundsIntersectsCoordinateBounds
+      - MGLCoordinateBoundsIsEmpty
+      - MGLCoordinateBoundsMake
+      - MGLCoordinateBoundsOffset
+      - MGLCoordinateInCoordinateBounds
+      - MGLCoordinateQuad
+      - MGLCoordinateQuadMake
+      - MGLCoordinateQuadFromCoordinateBounds
+      - MGLCoordinateSpan
+      - MGLCoordinateSpanEqualToCoordinateSpan
+      - MGLCoordinateSpanMake
+      - MGLCoordinateSpanZero
+      - MGLDegreesFromRadians
+      - MGLRadiansFromDegrees
+      - MGLStringFromCoordinateBounds
+      - MGLStringFromCoordinateQuad
+  - name: Formatters
+    children:
+      - MGLClockDirectionFormatter
+      - MGLCompassDirectionFormatter
+      - MGLCoordinateFormatter
+      - MGLDistanceFormatter

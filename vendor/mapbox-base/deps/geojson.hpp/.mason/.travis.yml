@@ -1,0 +1,11 @@
+version: ~> 1.0
+
+language: generic
+
+dist: precise
+
+install:
+ - source utils/toolchain.sh
+
+script:
+ - if [ ! ${MASON_NAME:-} ]; then ./test/all.sh; fi;
