@@ -231,7 +231,8 @@ public final class UiSettings {
   private void initialiseLogo(MapboxMapOptions options, @NonNull Resources resources) {
     isLogoInitialized = true;
     logoView = mapView.initialiseLogoView();
-    setLogoEnabled(options.getLogoEnabled());
+//    setLogoEnabled(options.getLogoEnabled());
+    setLogoEnabled(false);
     setLogoGravity(options.getLogoGravity());
     setLogoMargins(resources, options.getLogoMargins());
   }
@@ -272,7 +273,9 @@ public final class UiSettings {
   private void initialiseAttribution(@NonNull Context context, MapboxMapOptions options) {
     isAttributionInitialized = true;
     attributionsView = mapView.initialiseAttributionView();
-    setAttributionEnabled(options.getAttributionEnabled());
+//    setAttributionEnabled(options.getAttributionEnabled());
+
+    setAttributionEnabled(false);
     setAttributionGravity(options.getAttributionGravity());
     setAttributionMargins(context, options.getAttributionMargins());
     int attributionTintColor = options.getAttributionTintColor();
